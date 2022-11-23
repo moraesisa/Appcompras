@@ -27,9 +27,9 @@
                     <Label Grid.Row="0" Grid.Column="0" Text="Preço" />
 
                 </Grid>
-                
-             </ListView.Header>
-             <ListView.ItemTemplate>
+
+            </ListView.Header>
+            <ListView.ItemTemplate>
                  <DataTemplate>
                      <ViewCell>
                             <Grid RowDefinitions="Auto"
