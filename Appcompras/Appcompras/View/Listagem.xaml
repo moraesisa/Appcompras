@@ -10,9 +10,28 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <SearchBar x:Name="txt_busca" Placeholder="Qual produto?"/>
+
+            <RefreshView>
+                <ListView x:Name="lst_produtos">
+
+                </ListView>
+           
+            </RefreshView x:Name="ref_carregando" IsRefreshing="true">
+            <ListView.Header>
+                <Grid RowDefinitions="Auto"
+                      ColumnDefinitions="*, *, *">
+                    
+                </Grid>
+                
+            </ListView.Header>
+            
+            
+            <ListView x:Name="lst_produtos">
+                
+            </ListView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

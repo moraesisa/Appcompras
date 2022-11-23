@@ -29,15 +29,17 @@ namespace Appcompras.View
                     Preco = Convert.ToDouble(txt_preco.Text),
                 };
 
-                App.Database.Insert(P);
+              await  App.Database.Insert(P);
 
-                //Navigation.PushAsync(new NovoProduto());
+                await DisplayAlert("Sucesso!", "Produto Cadastrado", "OK");
+
+                 await Navigation.PushAsync(new Listagem());
 
             }
             catch (Exception ex)
 
             {
-                DisplayAlert("Ops", ex.Message, "OK");
+                 await DisplayAlert("Ops", ex.Message, "OK");
             }
         }
     }
