@@ -21,12 +21,25 @@
             </RefreshView x:Name="ref_carregando" IsRefreshing="true">
             <ListView.Header>
                 <Grid RowDefinitions="Auto"
-                      ColumnDefinitions="*, *, *">
-                    
+                      ColumnDefinitions="*, Auto, Auto">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Descrição" />
+                    <Label Grid.Row="0" Grid.Column="0" Text="Qnt" />
+                    <Label Grid.Row="0" Grid.Column="0" Text="Preço" />
+
                 </Grid>
                 
-            </ListView.Header>
-            
+             </ListView.Header>
+             <ListView.ItemTemplate>
+                 <DataTemplate>
+                     <ViewCell>
+                            <Grid RowDefinitions="Auto"
+                            ColumnDefinitions="*, Auto, Auto">
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Descricao}" />
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding quantidade} />
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Preco}" />
+                     </ViewCell>
+                 </DataTemplate>
+             </ListView.ItemTemplate>
             
             <ListView x:Name="lst_produtos">
                 
